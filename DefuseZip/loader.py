@@ -348,7 +348,6 @@ class DefuseZip:
         if not self.__zip_file.exists():  # pragma: no cover
             raise FileNotFoundError
         if psutil.LINUX:  # pragma: no cover
-
             with ZipFile(self.__zip_file, "r") as zip_ref:
                 if zip_ref.testzip():
                     return False

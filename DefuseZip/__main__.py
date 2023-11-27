@@ -173,7 +173,6 @@ def launch(opts: Namespace) -> int:
 
 def scan_files(files: List[Path], opts: Namespace) -> int:
     for file in files:
-
         target_zip = DefuseZip(
             file,
             opts.ratio_threshold,
